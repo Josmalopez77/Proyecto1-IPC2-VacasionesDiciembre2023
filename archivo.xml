@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca>
+    <cancion nombre="prueba">
+        <artista>prueba</artista>
+        <album>prueba</album>
+        <imagen>prueba"</imagen>
+        <ruta>ruta</ruta>
+    </cancion>
+    <cancion nombre="prueba">
+        <artista>prueba</artista>
+        <album>prueba</album>
+        <imagen>prueba</imagen>
+        <ruta>ruta</ruta>
+    </cancion>
+    <cancion nombre="prueba">
+        <artista>prueba</artista>
+        <album>prueba</album>
+        <imagen>prueba</imagen>
+        <ruta>ruta</ruta>
+    </cancion>
+</biblioteca>
