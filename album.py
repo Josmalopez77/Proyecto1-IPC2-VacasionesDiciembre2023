@@ -1,3 +1,4 @@
+from graphviz import Digraph
 class Nodo:
     def __init__(self, nombre, imagen, canciones):
         self.nombre = nombre
@@ -28,3 +29,23 @@ class  Lista_album:
             print("CANCIONES")
             actual.canciones.mostrar()
             actual = actual.siguiente
+            
+    def generar_grafo(self):
+        dot = Digraph(comment='Lista de Álbumes')
+
+        actual_album = self.inicio
+        while actual_album:
+            dot.node(actual_album.nombre)
+
+            if actual_album.siguiente:
+                dot.edge(actual_album.nombre, actual_album.siguiente.nombre)
+
+            # Generar el grafo de canciones para el álbum actual
+            if actual_album.canciones:
+                dot.subgraph(actual_album.canciones.generar_grafo())
+
+            actual_album = actual_album.siguiente
+
+        return dot
+        
+            

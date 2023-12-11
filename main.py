@@ -16,3 +16,5 @@ album.agregar_Album("album2","imagen2",cancion)
 
 lista.agregar_Artista("nombre1",album)
 lista.mostrar()
+grafo = lista.generar_grafo()
+grafo.render('lista_artistas', format='png', cleanup=True, view=True)

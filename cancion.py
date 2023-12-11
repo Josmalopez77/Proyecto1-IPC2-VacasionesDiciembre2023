@@ -1,3 +1,4 @@
+from graphviz import Digraph
 class Nodo:
     def __init__(self, nombre, ruta):
         self.nombre = nombre
@@ -20,9 +21,24 @@ class  Lista_canciones:
             self.fin.siguiente = nuevo
             self.fin=nuevo
             
-    def mostrar(self):
+    def mostrar(self,):
         actual = self.inicio
         while actual:
             print(actual.nombre, actual.ruta)
             actual = actual.siguiente
+            
+    def generar_grafo(self):
+        dot = Digraph(comment='Lista de Canciones')
+
+        actual_cancion = self.inicio
+        while actual_cancion:
+            dot.node(actual_cancion.nombre)
+
+            if actual_cancion.siguiente:
+                dot.edge(actual_cancion.nombre, actual_cancion.siguiente.nombre)
+
+            actual_cancion = actual_cancion.siguiente
+
+        return dot
+
         
