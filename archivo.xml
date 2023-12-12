@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <biblioteca>
-    <cancion nombre="prueba">
-        <artista>prueba</artista>
-        <album>prueba</album>
-        <imagen>prueba"</imagen>
-        <ruta>ruta</ruta>
+    <cancion nombre="Attack on bangtan">
+        <artista>BTS</artista>
+        <album>O!RUL8,2?</album>
+        <imagen>ruta de la imagen</imagen>
+        <ruta>ruta de la cncion</ruta>
     </cancion>
-    <cancion nombre="prueba">
-        <artista>prueba</artista>
-        <album>prueba</album>
-        <imagen>prueba</imagen>
-        <ruta>ruta</ruta>
+    <cancion nombre="the middle">
+        <artista>Jimmy Eat World</artista>
+        <album>Bleed American</album>
+        <imagen>ruta de la imagen 2</imagen>
+        <ruta>ruta de la cancion 2</ruta>
     </cancion>
-    <cancion nombre="prueba">
-        <artista>prueba</artista>
-        <album>prueba</album>
-        <imagen>prueba</imagen>
-        <ruta>ruta</ruta>
+    <cancion nombre="perfectly perfect">
+        <artista>Simple Plan</artista>
+        <album>Taking One For the Ream</album>
+        <imagen>ruta de la imagen 3</imagen>
+        <ruta>ruta de la cancion 3</ruta>
     </cancion>
 </biblioteca>

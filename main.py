@@ -2,19 +2,68 @@ from artista import Lista_artistas
 from album import Lista_album
 from cancion import Lista_canciones
 lista = Lista_artistas()
-album = Lista_album()
-cancion = Lista_canciones()
 
-cancion.agregar_Cancion("cancion1","ruta1")
-cancion.agregar_Cancion("cancion2","ruta2")
-cancion.agregar_Cancion("cancion3","ruta3")
-cancion.agregar_Cancion("cancion4","ruta4")
-cancion.agregar_Cancion("cancion5","ruta5")
+cont = 1
+a = "artista"
+albumm = "album"
+cancionn = "cancion"
+imagen = "imagen"
+ruta = "ruta"
 
-album.agregar_Album("album1","imagen1",cancion)
-album.agregar_Album("album2","imagen2",cancion)
+if  lista.validar(a):
+    print("Encontro el artista")
+    if lista.validarAlbum(a, albumm):
+        print("Encontro el album")
+        lista.agregar_Artista_Existente_Album(a, albumm, cancionn, ruta)
+    else:
+        album = Lista_album()
+        cancion = Lista_canciones()
+        cancion.agregar_Cancion(cancionn, ruta)
+        lista.agregar_Artista_Existente(a, albumm, imagen, cancion)     
+else:
+    cancion = Lista_canciones()
+    cancion.agregar_Cancion(cancionn, ruta)
+    album = Lista_album()
+    album.agregar_Album(albumm, imagen, cancion)
+    lista.agregar_Artista(a, album)
+    
+cancionn = "cancion2"
+ruta = "ruta2"  
+if  lista.validar(a):
+    print("Encontro el artista")
+    if lista.validarAlbum(a, albumm):
+        print("Encontro el album")
+        lista.agregar_Artista_Existente_Album(a, albumm, cancionn, ruta)
+    else:
+        album = Lista_album()
+        cancion = Lista_canciones()
+        cancion.agregar_Cancion(cancionn, ruta)
+        lista.agregar_Artista_Existente(a, albumm, imagen, cancion)     
+else:
+    cancion = Lista_canciones()
+    cancion.agregar_Cancion(cancionn, ruta)
+    album = Lista_album()
+    album.agregar_Album(albumm, imagen, cancionn)
+    lista.agregar_Artista(a, album)
 
-lista.agregar_Artista("nombre1",album)
+albumm="album2"
+if  lista.validar(a):
+    print("Encontro el artista")
+    if lista.validarAlbum(a, albumm):
+        print("Encontro el album")
+        lista.agregar_Artista_Existente_Album(a, albumm, cancionn, ruta)
+    else:
+        album = Lista_album()
+        cancion = Lista_canciones()
+        cancion.agregar_Cancion(cancionn, ruta)
+        lista.agregar_Artista_Existente(a, albumm, imagen, cancion)     
+else:
+    cancion = Lista_canciones()
+    cancion.agregar_Cancion(cancionn, ruta)
+    album = Lista_album()
+    album.agregar_Album(albumm, imagen, cancionn)
+    lista.agregar_Artista(a, album)
+
+
+    
 lista.mostrar()
-grafo = lista.generar_grafo()
-grafo.render('lista_artistas', format='png', cleanup=True, view=True)

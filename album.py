@@ -22,6 +22,27 @@ class  Lista_album:
             self.fin.siguiente = nuevo
             self.fin=nuevo
             
+    def agregar_Album_Existente(self, nombre, cancion, ruta):
+        actual = self.inicio
+        while actual:
+            if actual.nombre == nombre:
+                actual.canciones.agregar_Cancion(cancion, ruta)
+                print("Cancion Agregada al album existente")
+                return
+            actual = actual.siguiente
+                
+        
+            
+    def validar(self, nombre):
+        actual = self.inicio
+        while actual:
+            if actual.nombre == nombre:
+                return True
+            actual = actual.siguiente
+        return False
+            
+    
+            
     def mostrar(self):
         actual = self.inicio
         while actual:
@@ -30,10 +51,11 @@ class  Lista_album:
             actual.canciones.mostrar()
             actual = actual.siguiente
             
+            
     def generar_grafo(self):
         dot = Digraph(comment='Lista de Álbumes')
-
         actual_album = self.inicio
+
         while actual_album:
             dot.node(actual_album.nombre)
 

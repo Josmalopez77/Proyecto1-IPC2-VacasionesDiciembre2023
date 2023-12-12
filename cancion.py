@@ -21,6 +21,14 @@ class  Lista_canciones:
             self.fin.siguiente = nuevo
             self.fin=nuevo
             
+    def validar(self, nombre):
+        actual = self.inicio
+        while actual:
+            if nombre == actual.nombre:
+                print("La cancion ya existe")
+                return True
+            actual = actual.siguiente
+            
     def mostrar(self,):
         actual = self.inicio
         while actual:
