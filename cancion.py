@@ -32,7 +32,7 @@ class  Lista_canciones:
     def mostrar(self,):
         actual = self.inicio
         while actual:
-            print(actual.nombre, actual.ruta)
+            print("NOMBRE DE CANCION -> ",actual.nombre,"RUTA DE CANCION -> ", actual.ruta)
             actual = actual.siguiente
             
     def generar_grafo(self):

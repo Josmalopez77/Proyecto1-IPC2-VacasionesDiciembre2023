@@ -46,8 +46,8 @@ class  Lista_album:
     def mostrar(self):
         actual = self.inicio
         while actual:
-            print(actual.nombre, actual.imagen)
-            print("CANCIONES")
+            print("NOMBRE DEL ALBUM -> ",actual.nombre, "RUTA DE LA IMAGEN -> ",actual.imagen)
+            print("*** CANCIONES ***")
             actual.canciones.mostrar()
             actual = actual.siguiente
             

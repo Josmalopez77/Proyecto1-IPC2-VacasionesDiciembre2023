@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca>
+    <cancion nombre="Attack on bangtan">
+        <artista>BTS</artista>
+        <album>Bleed American</album>
+        <imagen>ruta de la imagen</imagen>
+        <ruta>ruta de la cncion</ruta>
+    </cancion>
+    <cancion nombre="Colors">
+        <artista>BTS</artista>
+        <album>Bleed American</album>
+        <imagen>ruta de la imagen 4</imagen>
+        <ruta>ruta de la cancion 4</ruta>
+    </cancion>
+    <cancion nombre="One Two">
+        <artista>BTS</artista>
+        <album>Darkness</album>
+        <imagen>ruta de la imagen 5</imagen>
+        <ruta>ruta de la cancion 5</ruta>
+    </cancion>
+</biblioteca>

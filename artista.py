@@ -58,9 +58,10 @@ class  Lista_artistas:
     def mostrar(self):
         actual = self.inicio
         while actual:
-            print(actual.nombre)
-            print("ALBUMES")
+            print("NOMBRE DEL ARTISTA -> ",actual.nombre)
+            print("*** ALBUMES ***")
             actual.album.mostrar()
+            print("------------")
             actual = actual.siguiente
             
     def generar_grafo(self):
